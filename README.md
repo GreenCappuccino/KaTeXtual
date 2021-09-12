@@ -5,7 +5,9 @@ manner.
 ```typescript
 import {KaTeXtual} from 'katextual';
 
-katextual = KaTeXtual.getInstance();
+// singleton with async initialization
+katextual = await KaTeXtual.getInstance();
 
-katextual.renderPng('\\int_0^{2\\pi}{\\sin{\\theta}}');
+// renders as buffer in PNG format
+const png: Buffer = await katextual.renderPng('\\int_0^{2\\pi}{\\sin{\\theta}}');
 ```
