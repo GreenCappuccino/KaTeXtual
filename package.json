@@ -5,7 +5,7 @@
   "main": "./dist/katextual.js",
   "scripts": {
     "build": "tsc && npm run copy-files",
-    "copy-files": "npx cpy src/puppeteerTemplate.hbs dist/puppeteerTemplate.hbs",
+    "copy-files": "npx cpy src/puppeteerTemplate.hbs dist",
     "test": "ts-mocha tests/**/*.test.ts --exit",
     "coverage": "nyc npm test",
     "lint": "eslint \"**\\src\\*.ts\""
