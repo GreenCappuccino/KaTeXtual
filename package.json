@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "ts-mocha tests/**/*.test.ts --exit",
-    "coverage": "nyc npm test"
+    "coverage": "nyc npm test",
+    "lint": "eslint \"**\\src\\*.ts\""
   },
   "files": [
     "dist",
@@ -17,6 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/GreenCappuccino/KaTextual.git"
   },
+  "keywords": ["tex", "latex", "katex", "png"],
   "author": "Brian Lu",
   "license": "MIT",
   "bugs": {
