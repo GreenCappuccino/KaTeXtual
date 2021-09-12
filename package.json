@@ -1,10 +1,11 @@
 {
   "name": "katextual",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Renders compatible TeX commands using KaTeX to images. ",
   "main": "./dist/katextual.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy-files",
+    "copy-files": "npx cpy src/puppeteerTemplate.hbs dist/puppeteerTemplate.hbs",
     "test": "ts-mocha tests/**/*.test.ts --exit",
     "coverage": "nyc npm test",
     "lint": "eslint \"**\\src\\*.ts\""
@@ -18,7 +19,12 @@
     "type": "git",
     "url": "git+https://github.com/GreenCappuccino/KaTextual.git"
   },
-  "keywords": ["tex", "latex", "katex", "png"],
+  "keywords": [
+    "tex",
+    "latex",
+    "katex",
+    "png"
+  ],
   "author": "Brian Lu",
   "license": "MIT",
   "bugs": {
@@ -32,6 +38,7 @@
     "@types/puppeteer": "^5.4.4",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
+    "cpy-cli": "^3.1.1",
     "eslint": "^7.32.0",
     "eslint-plugin-promise": "^5.1.0",
     "mocha": "^8.4.0",

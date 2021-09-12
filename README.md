@@ -3,7 +3,7 @@
 using [KaTeX](https://katex.org/) to image formats in a fast and customizable
 manner.
 ```typescript
-import {KaTeXtual} from '@greencap/katextual';
+import {KaTeXtual} from 'katextual';
 
 katextual = KaTeXtual.getInstance();
 
