@@ -1,42 +1,29 @@
 import * as katex from 'katex';
-import nodeHtmlToImage from 'node-html-to-image';
-import * as fs from 'fs';
-import * as path from 'path';
-import {FontUrlEncoder} from './fontUrlEncoder';
+import {Screenshotter} from './screenshotter';
 
 export class KaTeXtual {
-	private static _instance: KaTeXtual;
+	private static instance: KaTeXtual;
 
-	private static stylesheet: string;
+	private screenshotter: Screenshotter;
 
-	private constructor() {
-		KaTeXtual.stylesheet = fs.readFileSync(path.join(path.dirname(require.resolve('katex')), 'katex.min.css')).toString();
+	private constructor(screenshotter: Screenshotter) {
+		this.screenshotter = screenshotter;
 	}
 
-	public static getInstance(): KaTeXtual {
-		return this._instance || (this._instance = new this());
+	public static async getInstance(): Promise<KaTeXtual> {
+		return this.instance ||
+			(this.instance = new this(await Screenshotter.createScreenshotter()));
 	}
 
-	private static woff2ToUrl(path: string): string {
-		return `data:application/font-woff2;charset=utf-8;base64,${fs.readFileSync(path).toString('base64')}`;
+	public async renderPng(commands: string): Promise<Buffer> {
+		return await this.screenshotter.screenshot(
+			katex.renderToString(
+				commands, {
+					displayMode: true,
+				}));
 	}
 
-	public static async renderPng(data: string): Promise<Buffer> {
-		return nodeHtmlToImage({
-			html: `<!DOCTYPE html>
-				<html>
-					<head>
-						<style>${FontUrlEncoder.familesToCSS()}</style>
-						<style>${this.stylesheet}</style>
-					</head>
-					<body>
-						${katex.renderToString(data)}
-					</body>
-				</html>`,
-		}) as Promise<Buffer>;
-	}
-
-	public static initMhChem(): void {
+	public initMhChem(): void {
 		require('katex/dist/contrib/mhchem');
 	}
 }

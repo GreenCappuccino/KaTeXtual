@@ -7,5 +7,5 @@ import {KaTeXtual} from '@greencap/katextual';
 
 katextual = KaTeXtual.getInstance();
 
-katextual.renderPng('\\int_0^{2Pi}{\\sin{\\theta}}');
+katextual.renderPng('\\int_0^{2\\pi}{\\sin{\\theta}}');
 ```
