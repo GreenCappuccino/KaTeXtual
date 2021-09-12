@@ -2,16 +2,6 @@ import * as fontData from './fontData.json';
 import * as fsPromises from 'fs/promises';
 import * as path from 'path';
 
-interface FontFamily {
-	name: string,
-	fonts: Font[],
-}
-
-interface Font {
-	style: string,
-	data: string,
-}
-
 interface CssStyle {
 	style: string,
 	weight: string,
@@ -19,17 +9,15 @@ interface CssStyle {
 
 export class FontUrlEncoder {
 
-	public static async familesToCSS(): Promise<string> {
-		const families = await this.buildFamilies();
+	public static async buildCSS(): Promise<string> {
+		const katexPath = path.dirname(require.resolve('katex'));
 
 		let css = '';
 
-		for (let i = 0; i < families.length; i++) {
-			for (let j = 0; j < families[i].fonts.length; j++) {
-				css += `@font-face{font-family:'${families[i].name}';\
-				src:url(${families[i].fonts[j].data}) format('woff2');\
-				${this.mapStyleToProperty(families[i].fonts[j].style)}}`;
-			}
+		for (let i = 0; i < fontData.fonts.length; i++) {
+			css += `@font-face{font-family:'${fontData.fonts[i].family}';\
+				src:url(${await this.woff2ToUrl(path.join(katexPath, fontData.fonts[i].relpath))}) format('woff2');\
+				${this.mapStyleToProperty(fontData.fonts[i].style)}}`;
 		}
 
 		return css;
@@ -56,28 +44,6 @@ export class FontUrlEncoder {
 		]);
 		const styleVal = styleCssMap.get(style) as CssStyle;
 		return `font-style: ${styleVal.style};font-weight: ${styleVal.weight};`;
-	}
-
-	private static async buildFamilies(): Promise<FontFamily[]> {
-		const katexPath = path.dirname(require.resolve('katex'));
-
-		const fontFamilies: FontFamily[] = [];
-		const familyMap = new Map<string, number>();
-		for (let i = 0; i < fontData.fonts.length; i++) {
-			const fontUrlEncode = await this.woff2ToUrl(path.join(katexPath, fontData.fonts[i].relpath));
-			const font = {
-				style: fontData.fonts[i].style,
-				data: fontUrlEncode,
-			};
-			if (fontData.fonts[i].family in familyMap)
-				fontFamilies[familyMap.get(fontData.fonts[i].family) as number].fonts.push(font);
-			else
-				fontFamilies.push({
-					name: fontData.fonts[i].family,
-					fonts: [font],
-				});
-		}
-		return fontFamilies;
 	}
 
 	private static async woff2ToUrl(path: string): Promise<string> {

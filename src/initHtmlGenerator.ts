@@ -17,7 +17,7 @@ export class InitHtmlGenerator {
 		stylesheet = stylesheet.replace(/@font-face.*?{.*?}+/g, '');
 
 		return template({
-			fontFamilies: await FontUrlEncoder.familesToCSS(),
+			fontFamilies: await FontUrlEncoder.buildCSS(),
 			katexStylesheet: stylesheet,
 		});
 	}
