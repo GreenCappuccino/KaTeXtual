@@ -1,0 +1,45 @@
+{
+  "name": "katextual",
+  "version": "0.1.0",
+  "description": "Renders compatible TeX commands using KaTeX to images. ",
+  "main": "./dist/katextual.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-mocha tests/*.test.ts"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreenCappuccino/KaTextual.git"
+  },
+  "author": "Brian Lu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GreenCappuccino/KaTextual/issues"
+  },
+  "homepage": "https://github.com/GreenCappuccino/KaTextual#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/katex": "^0.11.1",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.9.1",
+    "@types/puppeteer": "^5.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "ts-mocha": "^8.0.0",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "katex": "^0.13.18",
+    "node-html-to-image": "^3.2.0"
+  }
+}

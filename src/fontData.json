@@ -1,0 +1,104 @@
+{
+  "fonts": [
+    {
+      "family": "AMS",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_AMS-Regular.woff2"
+    },
+    {
+      "family": "Caligraphic",
+      "style": "bold",
+      "relpath": "fonts/KaTeX_Caligraphic-Bold.woff2"
+    },
+    {
+      "family": "Caligraphic",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Caligraphic-Regular.woff2"
+    },
+    {
+      "family": "Franktur",
+      "style": "bold",
+      "relpath": "fonts/KaTeX_Fraktur-Bold.woff2"
+    },
+    {
+      "family": "Franktur",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Fraktur-Regular.woff2"
+    },
+    {
+      "family": "Main",
+      "style": "bold",
+      "relpath": "fonts/KaTeX_Main-Bold.woff2"
+    },
+    {
+      "family": "Main",
+      "style": "bolditalic",
+      "relpath": "fonts/KaTeX_Main-BoldItalic.woff2"
+    },
+    {
+      "family": "Main",
+      "style": "italic",
+      "relpath": "fonts/KaTeX_Main-Italic.woff2"
+    },
+    {
+      "family": "Main",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Main-Regular.woff2"
+    },
+    {
+      "family": "Math",
+      "style": "bolditalic",
+      "relpath": "fonts/KaTeX_Math-BoldItalic.woff2"
+    },
+    {
+      "family": "Math",
+      "style": "italic",
+      "relpath": "fonts/KaTeX_Math-Italic.woff2"
+    },
+    {
+      "family": "SansSerif",
+      "style": "bold",
+      "relpath": "fonts/KaTeX_SansSerif-Bold.woff2"
+    },
+    {
+      "family": "SansSerif",
+      "style": "italic",
+      "relpath": "fonts/KaTeX_SansSerif-Italic.woff2"
+    },
+    {
+      "family": "SansSerif",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_SansSerif-Regular.woff2"
+    },
+    {
+      "family": "Script",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Script-Regular.woff2"
+    },
+    {
+      "family": "Size1",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Size1-Regular.woff2"
+    },
+    {
+      "family": "Size2",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Size2-Regular.woff2"
+    },
+    {
+      "family": "Size3",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Size3-Regular.woff2"
+    },
+    {
+      "family": "Size4",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Size4-Regular.woff2"
+    },
+    {
+      "family": "Typewriter",
+      "style": "regular",
+      "relpath": "fonts/KaTeX_Typewriter-Regular.woff2"
+    }
+  ]
+}
