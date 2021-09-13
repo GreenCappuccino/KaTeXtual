@@ -11,3 +11,4 @@ katextual = await KaTeXtual.getInstance();
 // renders as buffer in PNG format
 const png: Buffer = await katextual.renderPng('\\int_0^{2\\pi}{\\sin{\\theta}}');
 ```
+[![NPM](https://nodei.co/npm/katextual.png)](https://npmjs.org/package/katextual)
