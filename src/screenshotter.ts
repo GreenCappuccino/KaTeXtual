@@ -20,11 +20,12 @@ export class Screenshotter {
 	}
 
 	public async screenshot(html: string): Promise<Buffer> {
+		html = html.replace('class="katex-html"', 'class="katex-html" style="display:inline-block;"');
 		/* istanbul ignore next */
 		await this.page.evaluate((html) => {
 			document.querySelector('#katexString')!.innerHTML = html;
 		}, html);
-		const base = await this.page.$('#katexString > span > span > span.katex-html > span');
+		const base = await this.page.$('#katexString > span > span > span.katex-html');
 		return await base?.screenshot() as Buffer;
 	}
 }
