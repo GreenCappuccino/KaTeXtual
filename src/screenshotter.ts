@@ -25,6 +25,7 @@ export class Screenshotter {
 		await this.page.evaluate((html) => {
 			document.querySelector('#katexString')!.innerHTML = html;
 		}, html);
+
 		const base = await this.page.$('#katexString > span > span > span.katex-html');
 		return await base?.screenshot() as Buffer;
 	}
