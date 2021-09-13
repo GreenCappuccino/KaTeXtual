@@ -21,8 +21,8 @@ export class Screenshotter {
 
 	public async screenshot(html: string): Promise<Buffer> {
 		html = html.replace('class="katex-html"', 'class="katex-html" style="display:inline-block;"');
-		/* istanbul ignore next */
 		await this.page.evaluate((html) => {
+			/* istanbul ignore next */
 			document.querySelector('#katexString')!.innerHTML = html;
 		}, html);
 
