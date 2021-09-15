@@ -16,7 +16,7 @@ export class FontUrlEncoder {
 
 		for (let i = 0; i < fontData.fonts.length; i++) {
 			css += `@font-face{font-family:'${fontData.fonts[i].family}';\
-				src:url(${await this.woff2ToUrl(path.join(katexPath, fontData.fonts[i].relpath))}) format('woff2');\
+				src:url(${await this.woff2ToUrl(path.join(katexPath, 'fonts', fontData.fonts[i].filename))}) format('woff2');\
 				${this.mapStyleToProperty(fontData.fonts[i].style)}}`;
 		}
 

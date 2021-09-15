@@ -3,102 +3,102 @@
     {
       "family": "KaTeX_AMS",
       "style": "regular",
-      "relpath": "fonts/KaTeX_AMS-Regular.woff2"
+      "filename": "KaTeX_AMS-Regular.woff2"
     },
     {
       "family": "KaTeX_Caligraphic",
       "style": "bold",
-      "relpath": "fonts/KaTeX_Caligraphic-Bold.woff2"
+      "filename": "KaTeX_Caligraphic-Bold.woff2"
     },
     {
       "family": "KaTeX_Caligraphic",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Caligraphic-Regular.woff2"
+      "filename": "KaTeX_Caligraphic-Regular.woff2"
     },
     {
       "family": "KaTeX_Franktur",
       "style": "bold",
-      "relpath": "fonts/KaTeX_Fraktur-Bold.woff2"
+      "filename": "KaTeX_Fraktur-Bold.woff2"
     },
     {
       "family": "KaTeX_Franktur",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Fraktur-Regular.woff2"
+      "filename": "KaTeX_Fraktur-Regular.woff2"
     },
     {
       "family": "KaTeX_Main",
       "style": "bold",
-      "relpath": "fonts/KaTeX_Main-Bold.woff2"
+      "filename": "KaTeX_Main-Bold.woff2"
     },
     {
       "family": "KaTeX_Main",
       "style": "bolditalic",
-      "relpath": "fonts/KaTeX_Main-BoldItalic.woff2"
+      "filename": "KaTeX_Main-BoldItalic.woff2"
     },
     {
       "family": "KaTeX_Main",
       "style": "italic",
-      "relpath": "fonts/KaTeX_Main-Italic.woff2"
+      "filename": "KaTeX_Main-Italic.woff2"
     },
     {
       "family": "KaTeX_Main",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Main-Regular.woff2"
+      "filename": "KaTeX_Main-Regular.woff2"
     },
     {
       "family": "KaTeX_Math",
       "style": "bolditalic",
-      "relpath": "fonts/KaTeX_Math-BoldItalic.woff2"
+      "filename": "KaTeX_Math-BoldItalic.woff2"
     },
     {
       "family": "KaTeX_Math",
       "style": "italic",
-      "relpath": "fonts/KaTeX_Math-Italic.woff2"
+      "filename": "KaTeX_Math-Italic.woff2"
     },
     {
       "family": "KaTeX_SansSerif",
       "style": "bold",
-      "relpath": "fonts/KaTeX_SansSerif-Bold.woff2"
+      "filename": "KaTeX_SansSerif-Bold.woff2"
     },
     {
       "family": "KaTeX_SansSerif",
       "style": "italic",
-      "relpath": "fonts/KaTeX_SansSerif-Italic.woff2"
+      "filename": "KaTeX_SansSerif-Italic.woff2"
     },
     {
       "family": "KaTeX_SansSerif",
       "style": "regular",
-      "relpath": "fonts/KaTeX_SansSerif-Regular.woff2"
+      "filename": "KaTeX_SansSerif-Regular.woff2"
     },
     {
       "family": "KaTeX_Script",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Script-Regular.woff2"
+      "filename": "KaTeX_Script-Regular.woff2"
     },
     {
       "family": "KaTeX_Size1",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Size1-Regular.woff2"
+      "filename": "KaTeX_Size1-Regular.woff2"
     },
     {
       "family": "KaTeX_Size2",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Size2-Regular.woff2"
+      "filename": "KaTeX_Size2-Regular.woff2"
     },
     {
       "family": "KaTeX_Size3",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Size3-Regular.woff2"
+      "filename": "KaTeX_Size3-Regular.woff2"
     },
     {
       "family": "KaTeX_Size4",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Size4-Regular.woff2"
+      "filename": "KaTeX_Size4-Regular.woff2"
     },
     {
       "family": "KaTeX_Typewriter",
       "style": "regular",
-      "relpath": "fonts/KaTeX_Typewriter-Regular.woff2"
+      "filename": "KaTeX_Typewriter-Regular.woff2"
     }
   ]
 }

@@ -7,7 +7,7 @@ export class Screenshotter {
 	private browser: Browser;
 	private page: Page;
 
-	constructor(browser: Browser, page: Page) {
+	private constructor(browser: Browser, page: Page) {
 		this.browser = browser;
 		this.page = page;
 	}
